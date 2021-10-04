@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tetris con Javascript</title>
+</head>
+<<canvas id='tablero' width=500 height=450></canvas>
+<script>
+    function triangulo(x1,y1,x2,y2,x3,y3,colorBorde,colorRelleno,grosorLinea){
+    ctx.beginPath();
+    ctx.strokeStyle = colorBorde;
+    ctx.fillStyle = colorRelleno;
+    ctx.lineWidth = grosorLinea;
+    ctx.moveTo(x1,y1);
+    ctx.lineTo(x2,y2);
+    ctx.lineTo(x3,y3);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+    }
+    var c = document.getElementById('tablero')
+    var ctx = c.getContext('2d')
+
+    triangulo(3,243,21,143,420,273,'gray',"#FF8000");
+    triangulo(3,323,78,390,321,51,'gray',"#339966");
+    triangulo(300,416,395,380,197,10,'gray',"yellow");
+</script>
+<center><h3>
+<body bgcolor="#00FFFF">
+Ejemplo complicado, pero vale la pena estudiarlo de santiago segura
+cómo se componen cada uno de esos colores utilizados, es decir, cuál es la intensidad de RGB de cada uno.
+Según los dos modelos ideales, ambos esquemas de color tienen una clara correspondencia: los colores secundarios del modelo RGB son los colores primarios de CMYK, y viceversa. Si bien esto es cierto en el plano teórico y puede considerarse válido hasta cierto punto, en la práctica es imposible de conseguir, ya que la percepción del color es una función biológica y no una propiedad física de la luz
+El concepto de colores secundarios y terciarios tiene su origen en la teoría del arte.
+
+Un color secundario es el obtenido mediante la mezcla de dos colores primarios en proporciones iguales.
+De la misma forma, un color terciario es el obtenido mediante la mezcla de un primario con su secundario. Si un primario se mezcla con su complementario secundario se forma
+</h3></center>
+<script>
+
