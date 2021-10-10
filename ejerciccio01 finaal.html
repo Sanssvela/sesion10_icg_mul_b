@@ -1,0 +1,26 @@
+canvas id='tablero'  width=800 height = 650canvas
+script
+  function triangulo(cd,colorBorde,colorRelleno,grosor)
+{ 
+ ctx.beginPath();
+ ctx.strokeStyle= colorBorde;
+ ctx.fillStyle= colorRelleno;
+ ctx.linewidth =grosor;
+ ctx.moveTo(cd[0],cd[1]);
+ ctx.lineTo(cd[2],cd[3]);
+ ctx.lineTo(cd[4],cd[5]);
+ ctx.closePath();
+ ctx.stroke();
+ ctx.fill();
+} 
+ var c=document.getElementById('tablero')
+ var ctx = c.getContext('2d')
+ triangulo([100,114,492,175,142,300],'rgba(250,127,39)','rgba(195,195,295)');
+ if (ctx) 
+{
+ctx.fillStyle = #b35; 
+ctx.fillRect(200,175,210,160);
+}
+
+
+ script 
